@@ -17,9 +17,9 @@
 /**
  * This file keeps track of upgrades to the evento enrolment plugin
  *
- * @package    enrol_evento
- * @copyright  2017 HTW Chur Roger Barras
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package   enrol_evento
+ * @copyright 2017 HTW Chur Roger Barras
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
@@ -27,10 +27,10 @@ defined('MOODLE_INTERNAL') || die();
 
 function xmldb_enrol_evento_install() {
     global $DB, $CFG;
-    require_once($CFG->dirroot . '/user/profile/definelib.php');
-    require_once($CFG->dirroot . '/enrol/evento/locallib.php');
+    include_once($CFG->dirroot . '/user/profile/definelib.php');
+    include_once($CFG->dirroot . '/enrol/evento/locallib.php');
 
-    // Check if user definied field exists
+    // Check if user definied field exists.
     $uifid = $DB->get_records('user_info_field', array('shortname' => ENROL_EVENTO_UIF_EVENTOID));
 
     if (empty($uifid)) {

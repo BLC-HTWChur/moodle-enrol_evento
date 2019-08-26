@@ -37,9 +37,9 @@
  * $ sudo -u www-data /usr/bin/php admin/tool/task/cli/schedule_task.php /
  * --execute=\\enrol_evento\\task\\evento_sync_task
  *
- * @package    enrol_evento
- * @copyright  2017 HTW Chur Roger Barras
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package   enrol_evento
+ * @copyright 2017 HTW Chur Roger Barras
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 
@@ -76,7 +76,7 @@ if (!enrol_is_enabled('evento')) {
     cli_error('enrol_evento plugin is disabled, synchronisation stopped', 2);
 }
 
-// @var $plugin enrol_evento_plugin
+// ...@var $plugin enrol_evento_plugin.
 $plugin = enrol_get_plugin('evento');
 
 if (empty($options['verbose'])) {
